@@ -1,5 +1,6 @@
 package com.kevinbrenes.proyecto_diabetes;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,12 +24,14 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtAltura;
     private EditText txtDescripcion;
     private Button btnGuardar;
+    //////////////////////////////////////////////////////////////////////////////////////////////
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mapearComponentes();
         obtenerConfiguracion();
+        irSiguienteActividad();
     }
 
     private void mapearComponentes() {
@@ -69,10 +72,19 @@ public class MainActivity extends AppCompatActivity {
             editor.putString("configuracion", jsonConfig.toString());
             editor.commit();
             Toast.makeText(this, "Configuración Guardada con Éxito", Toast.LENGTH_SHORT).show();
+            irSiguienteActividad();
         } catch (JSONException e) {
             e.printStackTrace();
             Toast.makeText(this, "No se guardó la configuración", Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    private void irSiguienteActividad() {
+        if(nuevoUsuario == false) {
+            Intent nuevaActividad = new Intent(this, MedicamentosActivity.class);
+            startActivity(nuevaActividad);
+            finish();
+        }
     }
 }

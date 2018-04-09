@@ -97,33 +97,43 @@
                     android:paddingLeft="8dp"
                     android:paddingRight="8dp">
 
-                    <RadioButton
-                        android:id="@+id/vrdbTipo1"
+                    <RadioGroup
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Tipo 1" />
+                        android:layout_height="match_parent" >
 
-                    <RadioButton
-                        android:id="@+id/vrdbTipo2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Tipo 2" />
+                        <RadioButton
+                            android:id="@+id/vrdbTipo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="Tipo 1" />
 
-                    <RadioButton
-                        android:id="@+id/vrdbTipoGestional"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text="Gestional" />
+                        <RadioButton
+                            android:id="@+id/vrdbTipo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="Tipo 2" />
 
-                    <RadioButton
-                        android:id="@+id/vrdbTipoOtro"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:text=" Otro Tipo de Diabetes" />
+                        <RadioButton
+                            android:id="@+id/vrdbTipoOtro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text=" Otro Tipo de Diabetes" />
+
+                        <RadioButton
+                            android:id="@+id/vrdbTipoGestional"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text="Gestional" />
+                    </RadioGroup>
 
                 </LinearLayout>
 
