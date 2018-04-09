@@ -119,20 +119,20 @@
                             android:text="Tipo 2" />
 
                         <RadioButton
-                            android:id="@+id/vrdbTipoOtro"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8dp"
-                            android:layout_weight="1"
-                            android:text=" Otro Tipo de Diabetes" />
-
-                        <RadioButton
                             android:id="@+id/vrdbTipoGestional"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8dp"
                             android:layout_weight="1"
                             android:text="Gestional" />
+
+                        <RadioButton
+                            android:id="@+id/vrdbTipoOtro"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="1"
+                            android:text=" Otro Tipo de Diabetes" />
                     </RadioGroup>
 
                 </LinearLayout>
